@@ -34,6 +34,7 @@ h6 {
   transition: .2s transform ease-in-out;
   will-change: transform;
   z-index: 0;
+  white-space: nowrap;
 
   &::after {
     background-color: @primary;
@@ -91,7 +92,23 @@ h6 {
     background-color: transparent;
     color: @brand;
     border: 1px solid @brand;
+  }
 
+  &.btn-custom__outline__white {
+    background-color: transparent;
+    color: @white;
+    border: 1px solid @white;
+
+    &::after {
+      background-color: @white;
+    }
+
+    &:hover {
+      background-color: @white;
+      color: @primary;
+      transform: scale(1.03);
+
+    }
   }
 
 
@@ -327,6 +344,11 @@ section {
       color: white;
     }
 
+    h2 {
+      color: @white;
+      z-index: 0;
+    }
+
     .section-title {
       .overline {
         color: white;
@@ -355,6 +377,15 @@ section {
   @media only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
     background-image: url('../img/img-hero-hp@2x.jpg');
+  }
+
+  &.hero-about {
+    background-image: url(../img/img-hero-about.jpg);
+
+    @media only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+      background-image: url('../img/img-hero-about@2x.jpg');
+    }
   }
 
   @media @breakpoint-tablet {
@@ -565,6 +596,10 @@ section {
       background: rgba(210, 204, 250, 0.80);
     }
 
+    &::after {
+      background: rgba(210, 204, 250, 0.80);
+    }
+
   }
 }
 
@@ -719,5 +754,14 @@ footer {
 
   .copyright {
     opacity: .3;
+  }
+}
+
+.subscription-section {
+  .cta-block {
+    background-color: transparent;
+    padding: 0;
+
+
   }
 }

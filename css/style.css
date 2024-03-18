@@ -151,6 +151,7 @@ h6 {
   transition: 0.2s transform ease-in-out;
   will-change: transform;
   z-index: 0;
+  white-space: nowrap;
 }
 .btn-custom::after {
   background-color: #272575;
@@ -199,6 +200,19 @@ h6 {
   background-color: transparent;
   color: #EA4CDA;
   border: 1px solid #EA4CDA;
+}
+.btn-custom.btn-custom__outline__white {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn-custom.btn-custom__outline__white::after {
+  background-color: #fff;
+}
+.btn-custom.btn-custom__outline__white:hover {
+  background-color: #fff;
+  color: #272575;
+  transform: scale(1.03);
 }
 .btn-custom .btn-custom-text {
   font-weight: 700;
@@ -405,6 +419,10 @@ section.section-dark {
 section.section-dark p {
   color: white;
 }
+section.section-dark h2 {
+  color: #fff;
+  z-index: 0;
+}
 section.section-dark .section-title .overline {
   color: white;
 }
@@ -427,6 +445,14 @@ section.section-dark .section-title .title {
 @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .hero-section {
     background-image: url('../img/img-hero-hp@2x.jpg');
+  }
+}
+.hero-section.hero-about {
+  background-image: url(../img/img-hero-about.jpg);
+}
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .hero-section.hero-about {
+    background-image: url('../img/img-hero-about@2x.jpg');
   }
 }
 @media (max-width: 991px) {
@@ -603,6 +629,9 @@ section.section-dark .section-title .title {
 .tape-effect.tape-effect__primary::before {
   background: rgba(210, 204, 250, 0.8);
 }
+.tape-effect.tape-effect__primary::after {
+  background: rgba(210, 204, 250, 0.8);
+}
 .img-custom {
   border: 6px solid #fff;
   box-shadow: 0px 13px 33px 0px rgba(0, 0, 0, 0.16);
@@ -736,4 +765,8 @@ footer .footer-content .footer-column.footer-column-three {
 }
 footer .copyright {
   opacity: 0.3;
+}
+.subscription-section .cta-block {
+  background-color: transparent;
+  padding: 0;
 }
