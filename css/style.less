@@ -12,7 +12,13 @@ a {
   font-weight: 700;
   text-decoration: none;
   color: @primary;
+
+  &.a-underline {
+    text-decoration: underline;
+  }
 }
+
+
 
 h1,
 h2,
@@ -308,6 +314,11 @@ section {
     }
   }
 
+  &.section__footer-line {
+    border-bottom: 2px solid rgb(232 229 252);
+
+  }
+
   .section-title {
     margin-bottom: 32px;
 
@@ -385,6 +396,24 @@ section {
     @media only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx) {
       background-image: url('../img/img-hero-about@2x.jpg');
+    }
+  }
+
+  &.hero-podcast {
+    background-image: url(../img/img-hero-podcast.jpg);
+
+    @media only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+      background-image: url('../img/img-hero-podcast@2x.jpg');
+    }
+  }
+
+  &.hero-contact {
+    background-image: url(../img/img-hero-contact.jpg);
+
+    @media only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+      background-image: url('../img/img-hero-contact@2x.jpg');
     }
   }
 

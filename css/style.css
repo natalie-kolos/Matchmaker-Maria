@@ -132,6 +132,9 @@ a {
   text-decoration: none;
   color: #272575;
 }
+a.a-underline {
+  text-decoration: underline;
+}
 h1,
 h2,
 h3,
@@ -385,6 +388,9 @@ section.section {
     padding: 32px 0;
   }
 }
+section.section__footer-line {
+  border-bottom: 2px solid #e8e5fc;
+}
 section .section-title {
   margin-bottom: 32px;
 }
@@ -453,6 +459,22 @@ section.section-dark .section-title .title {
 @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .hero-section.hero-about {
     background-image: url('../img/img-hero-about@2x.jpg');
+  }
+}
+.hero-section.hero-podcast {
+  background-image: url(../img/img-hero-podcast.jpg);
+}
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .hero-section.hero-podcast {
+    background-image: url('../img/img-hero-podcast@2x.jpg');
+  }
+}
+.hero-section.hero-contact {
+  background-image: url(../img/img-hero-contact.jpg);
+}
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .hero-section.hero-contact {
+    background-image: url('../img/img-hero-contact@2x.jpg');
   }
 }
 @media (max-width: 991px) {
