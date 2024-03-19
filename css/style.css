@@ -606,6 +606,7 @@ section.section-dark .section-title .title {
 }
 .highlighted-title.highlighted-title__white {
   color: white;
+  z-index: 1;
 }
 .highlighted-title.highlighted-title__white::before {
   background-color: rgba(210, 204, 250, 0.55);
@@ -865,4 +866,24 @@ footer .copyright {
 }
 .section-services .service:nth-child(even) {
   flex-direction: row-reverse;
+}
+.modal-content {
+  background-color: #272575;
+}
+.modal-content .modal-header {
+  border: 0;
+  padding-top: 16%;
+  justify-content: center;
+}
+.modal-content .modal-header h2 {
+  text-align: center;
+}
+.modal-content .modal-header .btn-close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+.modal-content .modal-body {
+  padding: 10%;
+  padding-top: 24px;
 }

@@ -151,9 +151,6 @@
             </div>
           </div>
         </div>
-
-
-
     </section>
     <section class="section section-dark subscription-section">
       <div class="container">
@@ -166,19 +163,15 @@
             ever-evolving landscape of modern relationships, my newsletter is designed to be your trusted source.
             Subscribe to gain
             access!</p>
-          <a href="#" class="btn btn-custom btn-custom__outline__white">Join Now</a>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-custom btn-custom__outline__white" data-bs-toggle="modal"
+            data-bs-target="#ModalNewsletter">
+            Join Now
+          </button>
         </div>
       </div>
     </section>
-    <section class="section section-dark subscription-section">
-      <div class="container">
-        <div class="cta-block">
-          <h2 class="highlighted-title highlighted-title__white">Enroll in an upcoming Agape Intensive using the form
-            below</h2>
 
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -247,6 +240,32 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="ModalNewsletter" tabindex="-1" aria-labelledby="ModalNewsletterLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" data-bs-theme="dark">
+          <h2 class="highlighted-title highlighted-title__white" id="ModalNewsletterLabel">Join My
+            Weekly Newsletter</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="d-flex align-items-center flex-column">
+            <div class="form-floating w-100 mb-4">
+              <input type="text" class="form-control" id="floatingName" placeholder="Your Name">
+              <label for="floatingName">Your Name</label>
+            </div>
+            <div class="form-floating w-100 mb-4">
+              <input type="email" class="form-control" id="floatingEmail" placeholder="Email address">
+              <label for="floatingEmail">Email address</label>
+            </div>
+            <button type="submit" class="btn btn-custom btn-custom__outline__white">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
