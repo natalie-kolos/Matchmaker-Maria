@@ -201,8 +201,11 @@ h6 {
 }
 .btn-custom.btn-custom__outline__brand {
   background-color: transparent;
-  color: #EA4CDA;
+  color: #272575;
   border: 1px solid #EA4CDA;
+}
+.btn-custom.btn-custom__outline__brand:hover {
+  color: #EA4CDA;
 }
 .btn-custom.btn-custom__outline__white {
   background-color: transparent;
@@ -213,8 +216,19 @@ h6 {
   background-color: #fff;
 }
 .btn-custom.btn-custom__outline__white:hover {
-  background-color: #fff;
   color: #272575;
+  transform: scale(1.03);
+}
+.btn-custom.btn-custom__outline__primary {
+  background-color: transparent;
+  color: #272575;
+  border: 1px solid #272575;
+}
+.btn-custom.btn-custom__outline__primary::after {
+  background-color: #272575;
+}
+.btn-custom.btn-custom__outline__primary:hover {
+  color: #fff;
   transform: scale(1.03);
 }
 .btn-custom .btn-custom-text {
@@ -477,6 +491,34 @@ section.section-dark .section-title .title {
     background-image: url('../img/img-hero-contact@2x.jpg');
   }
 }
+.hero-section.hero-gradient {
+  background-image: url(../img/img-hero-bg.jpg);
+  padding: 88px 0;
+}
+.hero-section.hero-gradient p {
+  color: #23063A;
+}
+.hero-section.hero-gradient h3 {
+  color: #23063A;
+}
+.hero-section.hero-gradient .tape-effect {
+  transform: rotate(4.15deg);
+}
+.hero-section.hero-gradient .tape-effect:first-child {
+  transform: rotate(-4.25deg);
+}
+.hero-section.hero-gradient::after {
+  background: none;
+}
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .hero-section.hero-gradient {
+    background-image: url('../img/img-hero-bg@2x.jpg');
+  }
+}
+.hero-section.hero-auto {
+  padding: 140px 0;
+  height: auto;
+}
 @media (max-width: 991px) {
   .hero-section {
     height: auto;
@@ -545,6 +587,9 @@ section.section-dark .section-title .title {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
+}
+.subscription-section-followed.hero-section::before {
+  background: url(../img/figure-hero-line-primary.svg) no-repeat center bottom;
 }
 .highlighted-title {
   position: relative;
@@ -791,4 +836,33 @@ footer .copyright {
 .subscription-section .cta-block {
   background-color: transparent;
   padding: 0;
+}
+.section-service {
+  padding: 40px 0;
+}
+.section-service .service-content p + h3 {
+  margin-top: 24px;
+}
+.section-service .service-content h3 {
+  position: relative;
+  display: inline-block;
+  color: #23063A;
+}
+.section-service .service-content h3::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 7px;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+}
+.section-service .service-content h3::before {
+  background-color: rgba(210, 204, 250, 0.5);
+}
+.section-services .service {
+  margin-bottom: 56px;
+}
+.section-services .service:nth-child(even) {
+  flex-direction: row-reverse;
 }

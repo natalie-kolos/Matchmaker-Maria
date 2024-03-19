@@ -96,8 +96,12 @@ h6 {
 
   &.btn-custom__outline__brand {
     background-color: transparent;
-    color: @brand;
+    color: @primary;
     border: 1px solid @brand;
+
+    &:hover {
+      color: @brand;
+    }
   }
 
   &.btn-custom__outline__white {
@@ -110,8 +114,23 @@ h6 {
     }
 
     &:hover {
-      background-color: @white;
       color: @primary;
+      transform: scale(1.03);
+
+    }
+  }
+
+  &.btn-custom__outline__primary {
+    background-color: transparent;
+    color: @primary;
+    border: 1px solid @primary;
+
+    &::after {
+      background-color: @primary;
+    }
+
+    &:hover {
+      color: @white;
       transform: scale(1.03);
 
     }
@@ -417,6 +436,43 @@ section {
     }
   }
 
+  &.hero-gradient {
+    background-image: url(../img/img-hero-bg.jpg);
+    padding: 88px 0;
+
+    p {
+      color: @text-primary;
+    }
+
+    h3 {
+      color: @text-primary;
+    }
+
+    .tape-effect {
+      transform: rotate(4.15deg);
+
+      &:first-child {
+        transform: rotate(-4.25deg);
+      }
+
+    }
+
+    &::after {
+      background: none;
+    }
+
+    @media only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+      background-image: url('../img/img-hero-bg@2x.jpg');
+    }
+  }
+
+  &.hero-auto {
+    padding: 140px 0;
+    height: auto;
+  }
+
+
   @media @breakpoint-tablet {
     height: auto;
   }
@@ -446,6 +502,7 @@ section {
     bottom: -1px;
     left: 0;
     z-index: -1;
+
 
     @media @breakpoint-desktop-xl {
       height: 270px;
@@ -487,6 +544,11 @@ section {
       line-height: 1.5;
     }
   }
+}
+
+.subscription-section-followed.hero-section::before {
+  background: url(../img/figure-hero-line-primary.svg) no-repeat center bottom;
+
 }
 
 .highlighted-title {
@@ -792,5 +854,49 @@ footer {
     padding: 0;
 
 
+  }
+}
+
+.section-service {
+
+  padding: 40px 0;
+
+  .service-content {
+    p+h3 {
+      margin-top: 24px;
+    }
+
+    h3 {
+      position: relative;
+      display: inline-block;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 7px;
+        left: 0;
+        right: 0;
+        bottom: 18px;
+      }
+
+      color: @text-primary;
+
+      &::before {
+        background-color: rgba(210, 204, 250, 0.50);
+      }
+    }
+
+  }
+}
+
+.section-services {
+
+  .service {
+    margin-bottom: 56px;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
   }
 }
